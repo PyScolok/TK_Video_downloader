@@ -21,7 +21,7 @@ class VideoDownloader:
     def get_all_res(self):
         return [stream.resolution for stream in self._get_streams()]
 
-    def download(self, resolution, path):
+    def download(self, resolution):
         video = self._get_streams().filter(res=resolution).first()
         video.download('./video')
     

@@ -78,7 +78,7 @@ class Gui:
         self.resolutions_box.configure(values=res_list, state='readonly')
         
     def accept_button_handler(self):
-        pattern = r'^http(s)?:\/\/(?:www\.)?youtube.com\/watch\?(?=.*v=\w{11})(?:\S+)?$'
+        pattern = r'^http(s)?:\/\/(?:www\.)?youtube.com\/watch\?(?=.*v=\S{11})(?:\S+)?$'
         if re.fullmatch(pattern, self.url_input_field.get()):
             self.change_frame()
         else:
