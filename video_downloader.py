@@ -24,7 +24,3 @@ class VideoDownloader:
     def download(self, resolution):
         video = self._get_streams().filter(res=resolution).first()
         video.download('./video')
-    
-
-
-    
